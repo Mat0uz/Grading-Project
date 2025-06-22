@@ -39,7 +39,7 @@ int main() {
         if (average >= 90)
             letterGrade = "A";
         else if (average <= 89 && average >= 88)
-            letterGrade = "A-"
+            letterGrade = "A-";
         else if (average <= 87 && average >= 86 )
             letterGrade = "B+";
         else if (average <= 85 && average >= 80)
@@ -58,7 +58,7 @@ int main() {
         if (average >= 9)
             letterGrade = "A";
         else if (average <= 8.9 && average >= 8.8)
-            letterGrade = "A-"
+            letterGrade = "A-";
         else if (average <= 8.7 && average >= 8.6 )
             letterGrade = "B+";
         else if (average <= 8.5 && average >= 8)
