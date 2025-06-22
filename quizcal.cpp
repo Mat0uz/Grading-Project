@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include <iomanip> // For setprecision
+#include <iomanip> // For setprecision anf setw
 using namespace std;
 
 int main() {
@@ -77,10 +77,26 @@ int main() {
     
     // Format and display output
     cout << fixed << setprecision(1); // Show 1 decimal places
+    cout << left;
 
-    cout << "Student Name: " << name << endl;
-    cout << "Average (Top 3 Quizzes): " << average << "%\n";
-    cout << "Lowest graded removed from average: " << lowest << "%\n";
+    if (format == "points"){
+        cout << "Students name: " << name << endl;
+        cout << "Grade Item" << setw(20) << "Points" << setw(20) << "Grade\n";
+        cout << "Quiz 1" << setw(20) << quiz1 << "/10" << setw(20) << letterGrade << endl;
+        cout << "Quiz 2" << setw(20) << quiz2 << "/10" << setw(20) << letterGrade << endl;
+        cout << "Quiz 3" << setw(20) << quiz3 << "/10" << setw(20) << letterGrade << endl;
+        cout << "Quiz 4" << setw(20) << quiz4 << "/10" << setw(20) << letterGrade << endl;}
+    else{
+        cout << "Students name: " << name << endl;
+        cout << "Grade Item" << setw(20) << "Precentage" << setw(20) << "Grade\n";
+        cout << "Quiz 1" << setw(20) << quiz1 << "%" << setw(20) << letterGrade << endl;
+        cout << "Quiz 2" << setw(20) << quiz2 << "%" << setw(20) << letterGrade << endl;
+        cout << "Quiz 3" << setw(20) << quiz3 << "%" << setw(20) << letterGrade << endl;
+        cout << "Quiz 4" << setw(20) << quiz4 << "%" << setw(20) << letterGrade << endl;}
+        
+    //cout << "Student Name: " << name << endl;
+    //cout << "Average (Top 3 Quizzes): " << average << "%\n";
+    //cout << "Lowest graded removed from average: " << lowest << "%\n";
     
     return 0;
 }
